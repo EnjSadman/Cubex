@@ -22,7 +22,11 @@ const startArr = [
 
 export default function App() {
   useEffect(() => {
-    if (localStorage.getItem("arr") === null) {
+    if (
+      localStorage.getItem("arr") === null ||
+      JSON.parse(localStorage.getItem("arr")).length === 0
+    ) {
+      console.log(JSON.parse(localStorage.getItem("arr")).length);
       localStorage.setItem("arr", JSON.stringify(startArr));
     }
   }, []);

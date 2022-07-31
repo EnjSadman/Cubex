@@ -98,7 +98,7 @@ export const List = () => {
       ))}
       <li className="list__item">
         <input
-          className="lsit__item--input"
+          className="list__item--input"
           placeholder="enter value"
           type="text"
           value={addValue}
