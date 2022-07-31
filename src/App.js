@@ -5,17 +5,17 @@ import { useEffect } from "react";
 const startArr = [
   {
     id: 1,
-    value: "1",
+    value: "first",
     sublist: []
   },
   {
     id: 2,
-    value: "2",
+    value: "second",
     sublist: []
   },
   {
     id: 3,
-    value: "3",
+    value: "third",
     sublist: []
   }
 ];

@@ -1,0 +1,48 @@
+.list {
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: unset;
+  background-color: transparent;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.list__item--input {
+  margin-right: auto;
+}
+
+.list__item--paragraph {
+  margin-right: auto;
+}
+
+.up__button {
+  background-color: darkblue;
+  color: white;
+}
+
+.down__button {
+  background-color: darkblue;
+  color: white;
+}
+
+.add__button {
+  background-color: darkgreen;
+  color: white;
+}
+
+.remove__button {
+  background-color: darkred;
+  color: white;
+}

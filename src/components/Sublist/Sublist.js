@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Sublist.css";
 
 export const Sublist = ({ id }) => {
   const wholeList = JSON.parse(localStorage.getItem("arr"));
@@ -21,9 +22,11 @@ export const Sublist = ({ id }) => {
   }, [sublistArrayData]);
 
   return (
-    <ul>
+    <ul className="sublist">
       {sublistArrayData.map((subEl) => (
-        <li key={subEl.id}>{subEl.value}</li>
+        <li className="item" key={subEl.id}>
+          {subEl.value}
+        </li>
       ))}
       <li>
         <input

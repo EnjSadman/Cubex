@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Sublist } from "../Sublist/Sublist";
 
+import "./List.css";
+
 export const List = () => {
   const [addValue, setAddValue] = useState("");
   const [listData, setListData] = useState([]);
@@ -15,11 +17,12 @@ export const List = () => {
   }, [listData]);
 
   return (
-    <ul>
+    <ul className="list">
       {listData.map((el, index) => (
-        <li key={el.id}>
-          {el.value}
+        <li className="list__item" key={el.id}>
+          <p className="list__item--paragraph">{el.value}</p>
           <button
+            className="button up__button"
             type="button"
             onClick={() => {
               if (index !== 0) {
@@ -32,9 +35,10 @@ export const List = () => {
               }
             }}
           >
-            up
+            up &#8593;
           </button>
           <button
+            className="button down__button"
             type="button"
             onClick={() => {
               if (index !== listData.length - 1) {
@@ -47,10 +51,11 @@ export const List = () => {
               }
             }}
           >
-            down
+            down &#8595;
           </button>
           {el.sublist.length === 0 && (
             <button
+              className="button add__button"
               type="button"
               onClick={() => {
                 el.sublist.push({
@@ -60,21 +65,23 @@ export const List = () => {
                 setListData([...listData]);
               }}
             >
-              add sublist
+              add sublist +
             </button>
           )}
           {el.sublist.length > 0 && (
             <button
+              className="button remove__button"
               type="button"
               onClick={() => {
                 el.sublist = [];
                 setListData([...listData]);
               }}
             >
-              remove sublist
+              remove sublist -
             </button>
           )}
           <button
+            className="button remove__button"
             type="button"
             onClick={() => {
               setListData(
@@ -82,15 +89,17 @@ export const List = () => {
               );
             }}
           >
-            remove
+            remove -
           </button>
           {el.sublist.length > 0 && (
             <Sublist id={index + 1} sublistArray={el.sublist} />
           )}
         </li>
       ))}
-      <li>
+      <li className="list__item">
         <input
+          className="lsit__item--input"
+          placeholder="enter value"
           type="text"
           value={addValue}
           onChange={(event) => {
@@ -98,6 +107,7 @@ export const List = () => {
           }}
         />
         <button
+          className="button add__button"
           type="button"
           onClick={() => {
             if (addValue !== "") {
@@ -111,7 +121,7 @@ export const List = () => {
             }
           }}
         >
-          add
+          add +
         </button>
       </li>
     </ul>
