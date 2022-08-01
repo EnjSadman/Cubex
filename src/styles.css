@@ -6,4 +6,47 @@ body {
 .App {
   font-family: sans-serif;
   margin: 0 16px;
+  background-color: lightgray;
+  padding: 8px;
+}
+
+.list {
+  margin: 0;
+}
+
+.list__item {
+  margin: 16px auto;
+}
+.item {
+  background-color: white;
+  padding: 8px;
+}
+
+.button {
+  margin: 0 16px;
+  border: unset;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.item__button--up {
+  background-color: blue;
+}
+
+.item__button--down {
+  background-color: darkgoldenrod;
+}
+
+.item__button--add {
+  background-color: darkgreen;
+}
+
+.item__button--remove {
+  background-color: darkred;
+}
+
+.adder {
+  margin-top: 16px;
 }
