@@ -1,7 +1,3 @@
-# Cubex
-
-## Created with CodeSandbox
-
 # Test task was made by me for Cubex
 
 ---

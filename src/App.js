@@ -18,7 +18,8 @@ export default function App() {
       localStorage.setItem("data", JSON.stringify({ childs: [] }));
     }
     const temp = JSON.parse(localStorage.getItem("data"));
-    if (temp.childs[0] === null) {
+    if (temp.childs === undefined) {
+      temp.childs = [];
       temp.childs.length = 1;
     }
 

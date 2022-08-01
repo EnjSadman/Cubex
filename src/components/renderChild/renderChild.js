@@ -2,7 +2,11 @@ import { Adder } from "../Adder/Adder";
 import { v4 as uuidv4 } from "uuid";
 
 export const renderChild = (child, update, setUpdate) => {
-  if (child !== undefined && child.childs[0] !== null) {
+  if (
+    child !== null &&
+    child.childs !== undefined &&
+    child.childs[0] !== null
+  ) {
     return (
       <ul className="list">
         {child.childs
